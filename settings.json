@@ -1,0 +1,21 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "extensions.autoUpdate": false,
+    "editor.tabSize": 2,
+    "editor.suggestSelection": "first",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.customMenuBarAltFocus": false,
+    "editor.fontSize": 16,
+    "files.autoSave": "off",
+    "editor.wordWrap": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "oneDarkPro.editorTheme": "nord",
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.multiCursorModifier": "ctrlCmd"
+}
