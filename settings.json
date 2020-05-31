@@ -34,5 +34,11 @@
   "carbon.fontFamily": "Hack",
   "carbon.fontSize": 13,
   // carbon.sh ends
-  "workbench.iconTheme": "vs-seti"
+  "workbench.iconTheme": "vs-seti",
+  "explorer.confirmDelete": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true
 }
