@@ -40,5 +40,12 @@
     "javascript": "javascriptreact"
   },
   "editor.fontFamily": "'Fira Code'",
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.letterSpacing": 1,
+  "editor.letterSpacing": 1,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.smoothScrolling": true
 }
+
