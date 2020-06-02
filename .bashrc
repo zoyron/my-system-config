@@ -134,3 +134,6 @@ alias fb="google-chrome https://www.facebook.com/"
 
 #opening android studio from anywhere using the terminal
 alias studio="~/./android-studio/bin/studio.sh"
+
+#test alias for github profile
+alias github="google-chrome https://github.com/zoyron"
