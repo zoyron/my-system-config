@@ -21,19 +21,7 @@
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "solid",
   "files.trimFinalNewlines": true,
-  "editor.acceptSuggestionOnCommitCharacter": false, // I hate this fucking setting, finally found a way to turn this bitch off
-  //carbon.sh starts
-  "carbon.backgroundColor": "rgba(0,0,0,0)",
-  "carbon.theme": "seti",
-  "carbon.dropShadow": true,
-  "carbon.windowControls": true,
-  "carbon.autoAdjustWidth": true,
-  "carbon.paddingVertical": 24,
-  "carbon.paddingHorizontal": 16,
-  "carbon.lineNumbers": false,
-  "carbon.fontFamily": "Hack",
-  "carbon.fontSize": 13,
-  // carbon.sh ends
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "workbench.iconTheme": "vs-seti",
   "explorer.confirmDelete": false,
   "emmet.includeLanguages": {
@@ -48,4 +36,3 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.smoothScrolling": true
 }
-
