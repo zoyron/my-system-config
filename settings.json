@@ -11,6 +11,9 @@
   "window.customMenuBarAltFocus": false,
   "editor.fontSize": 16,
   "files.autoSave": "off",
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": true,
+  "zenMode.centerLayout": true,
   "editor.wordWrap": "on",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -38,7 +41,8 @@
   "editor.smoothScrolling": true,
   "workbench.colorTheme": "Atom One Dark",
   "workbench.colorCustomizations": {
-    "terminal.foreground": "#ada7a6",
+    "terminal.foreground": "#eee9e8",
+    "terminal.background": "#000000",
     "activityBarBadge.background": "#ffc600",
     "editorCursor.foreground": "#ffc600",
     "inputValidation.errorBorder": "#ffc600",
@@ -49,5 +53,6 @@
     "peekViewTitleLabel.foreground": "#ffc600",
     "tab.activeBorder": "#ffc600",
     "statusBar.border": "#ffc600"
-  }
+  },
+  "workbench.activityBar.visible": false
 }
