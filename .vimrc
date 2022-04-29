@@ -2,6 +2,7 @@
 call plug#begin()
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'preservim/NERDTree'
+Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 
 " NERDtree will ignore these files
@@ -66,21 +67,23 @@ endfunction
 " open NERDTree with ctrl + n
 nmap <C-n> :call ToggleTree()<CR>
 
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" open quickfix window automatically when AsyncRun is executed
+" set the quickfix window 6 lines height.
+let g:asyncrun_open = 6
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+" ring the bell to notify you job finished
+let g:asyncrun_bell = 1
+
+" F10 to toggle quickfix window
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+
+" Compiling a file with async run with the key F9
+noremap <silent> <F9> :AsyncRun g++ -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
+
+" Running the compiled file with the key F5
+noremap <silent> <F5> :AsyncRun -raw -cwd=$(VIM_FILEDIR) "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
+
 
 
 " set UTF-8 encoding
@@ -134,3 +137,4 @@ set t_Co=256
 syntax on
 colo afterglow
 set background=dark
+
