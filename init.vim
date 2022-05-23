@@ -2,14 +2,15 @@
 call plug#begin()
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'preservim/NERDTree'
-Plug 'skywind3000/asyncrun.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mhartington/oceanic-next'
 call plug#end()
 
 " NERDtree will ignore these files
 let g:NERDTreeIgnore = ['^node_modules$']
 
 inoremap jk <ESC>
-nmap <C-n> :NERDTreeToggle<CR>
+nmap df :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -65,24 +66,40 @@ function! ToggleTree()
 endfunction
 
 " open NERDTree with ctrl + n
-nmap <C-n> :call ToggleTree()<CR>
+nmap df :call ToggleTree()<CR>
 
 
-" open quickfix window automatically when AsyncRun is executed
-" set the quickfix window 6 lines height.
-let g:asyncrun_open = 6
+" from readme
+" if hidden is not set, TextEdit might fail.
+set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
 
-" ring the bell to notify you job finished
-let g:asyncrun_bell = 1
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
 
-" F10 to toggle quickfix window
-nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+" always show signcolumns
+set signcolumn=yes
 
-" Compiling a file with async run with the key F9
-noremap <silent> <F9> :AsyncRun g++ -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
 
-" Running the compiled file with the key F5
-noremap <silent> <F5> :AsyncRun -raw -cwd=$(VIM_FILEDIR) "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 
@@ -99,7 +116,7 @@ set autoindent
 set smartindent
 
 "adding C++ template
-autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+"autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
 
 
 "changing tab size
@@ -109,7 +126,7 @@ set expandtab
 
 "show line numbers in vim
 set number
-
+set rnu
 " highlight matching braces
 set showmatch
 " intelligent comments
@@ -135,6 +152,6 @@ inoremap {;<CR> {<CR>};<ESC>O
 "syntax high lighting and colorscheme
 set t_Co=256
 syntax on
-colo afterglow
+colorscheme OceanicNext
 set background=dark
 
