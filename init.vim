@@ -160,7 +160,6 @@ set t_Co=256
 colorscheme neosolarized
 set background=dark
 
-
 " airline customization
 let g:airline_powerline_fonts = 1
 
