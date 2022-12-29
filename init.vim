@@ -6,6 +6,7 @@ Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhartington/oceanic-next'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 " NERDtree will ignore these files
