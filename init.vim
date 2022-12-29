@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'wakatime/vim-wakatime'
 Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhartington/oceanic-next'
