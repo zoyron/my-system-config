@@ -119,7 +119,7 @@ set autoindent
 set smartindent
 
 "adding C++ template
-autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp
 
 
 "changing tab size
