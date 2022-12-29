@@ -1,11 +1,12 @@
-
 call plug#begin()
+Plug 'wakatime/vim-wakatime'
 Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhartington/oceanic-next'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 
 " NERDtree will ignore these files
@@ -118,7 +119,7 @@ set autoindent
 set smartindent
 
 "adding C++ template
-"autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
 
 
 "changing tab size
@@ -157,9 +158,10 @@ inoremap {;<CR> {<CR>};<ESC>O
 "syntax high lighting and colorscheme
 set t_Co=256 
 "syntax on
-colorscheme neosolarized
+colorscheme tokyonight
 set background=dark
 
 " airline customization
 let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
 
