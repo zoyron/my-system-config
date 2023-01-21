@@ -8,7 +8,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.customMenuBarAltFocus": false,
   "editor.fontSize": 16,
   "files.autoSave": "off",
   "zenMode.hideLineNumbers": false,
@@ -19,7 +18,7 @@
   "editor.formatOnSave": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.cursorStyle": "block",
+  "editor.cursorStyle": "line",
   "editor.cursorBlinking": "solid",
   "files.trimFinalNewlines": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -28,31 +27,43 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "editor.fontFamily": "'Fira Code'",
+  "editor.fontFamily": "'FiraCode NF'",
   "editor.fontLigatures": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.letterSpacing": 2,
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.drawBoldTextInBrightColors": true,
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "FiraCode NF",
   "editor.letterSpacing": 1,
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.smoothScrolling": true,
-  "workbench.colorTheme": "Atom One Dark",
+  "editor.cursorSmoothCaretAnimation": false,
+  "editor.smoothScrolling": false,
   "workbench.colorCustomizations": {
-    "terminal.foreground": "#eee9e8",
-    "terminal.background": "#000000",
-    "activityBarBadge.background": "#ffc600",
-    "editorCursor.foreground": "#ffc600",
-    "inputValidation.errorBorder": "#ffc600",
-    "panel.border": "#ffc600",
-    "panelTitle.activeBorder": "#ffc600",
-    "panelTitle.activeForeground": "#ffc600",
-    "peekView.border": "#ffc600",
-    "peekViewTitleLabel.foreground": "#ffc600",
-    "tab.activeBorder": "#ffc600",
-    "statusBar.border": "#ffc600"
+    "terminal.foreground": "#cad2d6",
+    "terminal.background": "#212121",
+    "statusBar.background": "#1A1A1A",
+    "editorCursor.foreground": "#8f8d8d",
+    "statusBar.noFolderBackground": "#212121",
+    "statusBar.debuggingBackground": "#263238"
   },
-  "workbench.activityBar.visible": false
+  "workbench.editor.showTabs": true,
+  "window.openFoldersInNewWindow": "on",
+  "explorer.openEditors.visible": 0,
+  "breadcrumbs.enabled": false,
+  "workbench.activityBar.visible": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.guides.bracketPairs": "active",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ]
 }
+
