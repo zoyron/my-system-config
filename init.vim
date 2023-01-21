@@ -1,10 +1,8 @@
 call plug#begin()
 Plug 'wakatime/vim-wakatime'
 Plug 'vim-airline/vim-airline'
-Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mhartington/oceanic-next'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
@@ -24,16 +22,6 @@ nmap ++ <plug>NERDCommenterToggle
 let g:NERDTreeGitStatusWithFlags = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusNodeColorization = 1
-"let g:NERDTreeColorMapCustom = {
-    "\ "Staged"    : "#0ee375",  
-    "\ "Modified"  : "#d9bf91",  
-    "\ "Renamed"   : "#51C9FC",  
-    "\ "Untracked" : "#FCE77C",  
-    "\ "Unmerged"  : "#FC51E6",  
-    "\ "Dirty"     : "#FFBD61",  
-    "\ "Clean"     : "#87939A",   
-    "\ "Ignored"   : "#808080"   
-    "\""}         
 
 " Check if NERDTree is open or active
 function! IsNERDTreeOpen()
@@ -68,7 +56,7 @@ function! ToggleTree()
   endif
 endfunction
 
-" open NERDTree with ctrl + n
+" open NERDTree with d + f
 nmap df :call ToggleTree()<CR>
 
 
@@ -143,6 +131,7 @@ set showcmd
 set noshowmode
 set hlsearch
 set cursorline
+set wrap
 syntax enable
 
 
@@ -162,6 +151,6 @@ colorscheme tokyonight
 set background=dark
 
 " airline customization
-let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 2
+let g:airline#extensions#tabline#enabled = 1
 
