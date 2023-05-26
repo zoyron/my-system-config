@@ -150,6 +150,9 @@ set t_Co=256
 colorscheme tokyonight
 set background=dark
 
+"enabling copying to clipboard
+set clipboard=unnamed
+
 " airline customization
 let g:airline_powerline_fonts = 2
 let g:airline#extensions#tabline#enabled = 1
