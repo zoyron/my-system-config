@@ -1,0 +1,56 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.autoUpdate": false,
+  "files.autoSave": "onWindowChange",
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.icons": false,
+  "breadcrumbs.filePath": "last",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.letterSpacing": 0.5,
+  "terminal.integrated.fontSize": 14,
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideLineNumbers": false,
+  "terminal.integrated.shellIntegration.history": 0,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'FiraCode NF'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "block",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.wordWrap": "on",
+  "editor.cursorBlinking": "solid",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.letterSpacing": 0.25,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.limit.value": 3,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.colorCustomizations": {
+    "terminal.foreground": "#cad2d6",
+  },
+  "workbench.activityBar.visible": false
+}
