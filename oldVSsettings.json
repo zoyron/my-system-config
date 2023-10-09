@@ -9,7 +9,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.fontSize": 16,
-  "files.autoSave": "off",
+  "files.autoSave": "onWindowChange",
   "zenMode.hideLineNumbers": false,
   "zenMode.hideTabs": true,
   "zenMode.centerLayout": true,
