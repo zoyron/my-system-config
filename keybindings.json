@@ -27,5 +27,13 @@
   {
     "key": "cmd+j",
     "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "shift+cmd+\\",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorDown"
   }
 ]
