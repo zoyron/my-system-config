@@ -52,7 +52,7 @@
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.colorCustomizations": {
-    "terminal.foreground": "#cad2d6",
+    "terminal.foreground": "#cad2d6"
   },
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": false
 }
