@@ -157,3 +157,4 @@ set clipboard=unnamed
 let g:airline_powerline_fonts = 2
 let g:airline#extensions#tabline#enabled = 1
 
+
