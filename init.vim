@@ -1,6 +1,7 @@
 call plug#begin()
-Plug 'wakatime/vim-wakatime'
 Plug 'vim-airline/vim-airline'
+Plug 'tikhomirov/vim-glsl'
+Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -107,8 +108,10 @@ set autoindent
 set smartindent
 
 "adding C++ template
-autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp
+"autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp
 
+" setting a status line at the bottom
+set laststatus=2
 
 "changing tab size
 set tabstop=2
@@ -126,7 +129,6 @@ set comments=sl:/*,mb:\ *,elx:\ */
 "test random commands
 set ruler
 set smarttab
-set laststatus=0
 set showcmd
 set noshowmode
 set hlsearch
@@ -134,6 +136,8 @@ set cursorline
 set wrap
 syntax enable
 
+" speed up scrolling in vim
+set ttyfast
 
 " auto bracketing and auto quoting
 inoremap " ""<left>
@@ -153,8 +157,5 @@ set background=dark
 "enabling copying to clipboard
 set clipboard=unnamed
 
-" airline customization
-let g:airline_powerline_fonts = 2
-let g:airline#extensions#tabline#enabled = 1
 
 
