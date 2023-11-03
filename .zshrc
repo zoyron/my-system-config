@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -107,19 +108,21 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias for neovim
+alias vim="nvim"
 #alias nvim="./nvim-osx64/bin/nvim"
 
 # shortcut for using tmux as an ide
 alias ide="tmux split-window -v -p 30"
 
 # shortcut for changing "g++ -std=c++11" to "g++"
-alias g++="g++ -std=c++11"
+#alias g++="g++ -std=c++11"
 
 #alias for colorls
 alias ls="colorls"
 
 #alias for python3, setting it as python
-alias python="/usr/bin/python3"
+#alias python="/usr/bin/python3"
+alias python="python3"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
