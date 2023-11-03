@@ -13,8 +13,6 @@ let g:NERDTreeIgnore = ['^node_modules$']
 
 inoremap jk <ESC>
 nmap df :NERDTreeToggle<CR>
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
 
 " open NERDTree automatically
 "autocmd StdinReadPre * let s:std_in=1
@@ -60,10 +58,9 @@ endfunction
 " open NERDTree with d + f
 nmap df :call ToggleTree()<CR>
 
-
-" from readme
 " if hidden is not set, TextEdit might fail.
-set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
+set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup 
+" You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
 
 " don't give |ins-completion-menu| messages.
@@ -73,26 +70,29 @@ set shortmess+=c
 set signcolumn=yes
 
 
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" Use tab for trigger completion with characters ahead and navigate
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
+" Use <c-space> to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 
 
 " set UTF-8 encoding
@@ -113,6 +113,9 @@ set smartindent
 " setting a status line at the bottom
 set laststatus=2
 
+"avoid breaking of line in the middle of a
+set linebreak
+
 "changing tab size
 set tabstop=2
 set shiftwidth=2
@@ -126,6 +129,7 @@ set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 
+
 "test random commands
 set ruler
 set smarttab
@@ -135,13 +139,11 @@ set hlsearch
 set cursorline
 set wrap
 syntax enable
-
-" speed up scrolling in vim
-set ttyfast
+set wildmenu            " visual autocomplete for command menu
 
 " auto bracketing and auto quoting
 inoremap " ""<left>
-inoremap ' ''<left>
+inoremap ) ()
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
@@ -157,5 +159,18 @@ set background=dark
 "enabling copying to clipboard
 set clipboard=unnamed
 
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" turn off search highlighting with <CR> (carriage-return)
+nnoremap <CR> :nohlsearch<CR><CR>
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 
