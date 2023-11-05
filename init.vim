@@ -1,6 +1,6 @@
 call plug#begin()
-Plug 'vim-airline/vim-airline'
 Plug 'tikhomirov/vim-glsl'
+Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -149,6 +149,7 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+inoremap main main()
 
 "syntax high lighting and colorscheme
 set t_Co=256 
@@ -173,4 +174,7 @@ nnoremap <CR> :nohlsearch<CR><CR>
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+" to compile the C++ code without exiting the file
+nnoremap <leader>c :w<CR>:!g++ % -o a.out<CR>
 
