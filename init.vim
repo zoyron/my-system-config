@@ -143,7 +143,6 @@ set wildmenu            " visual autocomplete for command menu
 
 " auto bracketing and auto quoting
 inoremap " ""<left>
-inoremap ) ()
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
