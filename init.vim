@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'Yggdroot/indentLine'
 Plug 'tikhomirov/vim-glsl'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
@@ -143,6 +144,7 @@ set wildmenu            " visual autocomplete for command menu
 
 " auto bracketing and auto quoting
 inoremap " ""<left>
+inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
@@ -152,7 +154,7 @@ inoremap main main()
 
 "syntax high lighting and colorscheme
 set t_Co=256 
-"syntax on
+syntax on
 colorscheme tokyonight
 set background=dark
 
