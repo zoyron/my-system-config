@@ -150,7 +150,6 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-inoremap main main()
 
 "syntax high lighting and colorscheme
 set t_Co=256 
@@ -170,7 +169,7 @@ filetype plugin on
 filetype indent on
 
 " turn off search highlighting with <CR> (carriage-return)
-nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <CR> :nohlsearch<CR>
 
 " move vertically by visual line
 nnoremap j gj
