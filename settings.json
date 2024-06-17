@@ -1,8 +1,8 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
   "extensions.autoUpdate": false,
-  "files.autoSave": "onWindowChange",
-  "breadcrumbs.enabled": true,
+  "files.autoSave": "off",
+  "breadcrumbs.enabled": false,
   "breadcrumbs.icons": false,
   "breadcrumbs.filePath": "last",
   "terminal.integrated.cursorBlinking": true,
@@ -26,26 +26,38 @@
       ]
     }
   ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<CR>"
+      ],
+      "commands": [
+        ":nohlsearch"
+      ]
+    }
+  ],
   "zenMode.hideStatusBar": false,
   "zenMode.hideLineNumbers": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.tabCompletion": "off",
   "editor.formatOnPaste": true,
+  "editor.accessibilitySupport": "off",
   "editor.formatOnSave": true,
   "editor.fontFamily": "'FiraCode NF'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.tabSize": 2,
   "editor.cursorStyle": "block",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.wordWrap": "on",
   "editor.cursorBlinking": "solid",
   "editor.lineNumbers": "relative",
-  "editor.minimap.enabled": false,
   "editor.glyphMargin": false,
   "editor.letterSpacing": 0.25,
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": "off",
   "editor.multiCursorModifier": "ctrlCmd",
+  "editor.cursorSurroundingLines": 999,
   "workbench.editor.revealIfOpen": true,
-  "workbench.colorTheme": "Tokyo Night",
   "workbench.editor.pinnedTabsOnSeparateRow": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.limit.value": 3,
@@ -54,5 +66,14 @@
   "workbench.colorCustomizations": {
     "terminal.foreground": "#cad2d6"
   },
-  "workbench.activityBar.visible": false
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Nord",
+  "workbench.editor.enablePreview": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.sideBar.location": "right",
+  "editor.stickyScroll.enabled": false,
+  "editor.renderLineHighlight": "none",
+  "window.title": "${dirty}${separator}${activeEditorShort}",
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden",
 }
