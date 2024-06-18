@@ -63,9 +63,6 @@
   "workbench.editor.limit.value": 3,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
-  "workbench.colorCustomizations": {
-    "terminal.foreground": "#cad2d6"
-  },
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
@@ -73,7 +70,16 @@
   "workbench.sideBar.location": "right",
   "editor.stickyScroll.enabled": false,
   "editor.renderLineHighlight": "none",
-  "window.title": "${dirty}${separator}${activeEditorShort}",
+  "window.titleBarStyle": "custom",
   "window.commandCenter": false,
-  "workbench.activityBar.location": "hidden",
+  "workbench.startupEditor": "none",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#87CEEB",
+    "statusBar.foreground": "#263238",
+    "statusBar.noFolderBackground": "#212121",
+    "statusBar.debuggingBackground": "#263238",
+    "tab.activeBackground": "#87CEEB",
+    "tab.activeForeground": "#010101",
+  },
+  "window.density.editorTabHeight": "compact"
 }
