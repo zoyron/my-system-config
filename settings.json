@@ -8,7 +8,7 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.letterSpacing": 0.5,
   "terminal.integrated.shellIntegration.history": 0,
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 16,
   "vim.cursorStylePerMode.insert": "line",
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -17,23 +17,32 @@
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<CR>"
-      ],
-      "commands": [
-        ":nohlsearch"
-      ]
+      "before": ["<CR>"],
+      "commands": [":nohlsearch"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
     }
   ],
   "zenMode.hideStatusBar": false,
@@ -45,15 +54,14 @@
   "editor.formatOnSave": true,
   "editor.fontFamily": "'FiraCode NF'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.tabSize": 2,
   "editor.cursorStyle": "block",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.wordWrap": "on",
   "editor.cursorBlinking": "solid",
   "editor.lineNumbers": "relative",
-  "editor.glyphMargin": false,
-  "editor.letterSpacing": 0.25,
+  "editor.glyphMargin": true,
   "editor.lightbulb.enabled": "off",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.cursorSurroundingLines": 999,
@@ -64,22 +72,29 @@
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Nord",
   "workbench.editor.enablePreview": false,
   "workbench.layoutControl.enabled": false,
   "workbench.sideBar.location": "right",
   "editor.stickyScroll.enabled": false,
   "editor.renderLineHighlight": "none",
+  "workbench.editor.decorations.colors": false,
   "window.titleBarStyle": "custom",
   "window.commandCenter": false,
   "workbench.startupEditor": "none",
+  "workbench.editor.highlightModifiedTabs": false,
   "workbench.colorCustomizations": {
-    "statusBar.background": "#87CEEB",
-    "statusBar.foreground": "#263238",
-    "statusBar.noFolderBackground": "#212121",
-    "statusBar.debuggingBackground": "#263238",
-    "tab.activeBackground": "#87CEEB",
-    "tab.activeForeground": "#010101",
+    "editorCursor.foreground": "#838282",
+    "editorCursor.background": "#000"
   },
-  "window.density.editorTabHeight": "compact"
+  "window.density.editorTabHeight": "default",
+  "git.openRepositoryInParentFolders": "never",
+  "scm.diffDecorations": "none",
+  "editor.matchBrackets": "near",
+  // "editor.suggest.selectionMode": "never",
+  "workbench.colorTheme": "Material Theme Palenight",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.location": "hidden"
 }
