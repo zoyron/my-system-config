@@ -1,4 +1,3 @@
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -112,17 +111,20 @@ alias vim="nvim"
 #alias nvim="./nvim-osx64/bin/nvim"
 
 # shortcut for using tmux as an ide
-alias ide="tmux split-window -v -p 30"
-
-# shortcut for changing "g++ -std=c++11" to "g++"
-#alias g++="g++ -std=c++11"
+alias ide="tmux split-window -v -l 25%"
 
 #alias for colorls
 alias ls="colorls"
 
+#git commit -a -m alias
+alias gam="git commit -a -m"
+alias gamr="git commit -a -m "rec commit""
+alias gs="git status"
+
 #alias for python3, setting it as python
 #alias python="/usr/bin/python3"
-alias python="python3"
+#alias python="python3.10"
+alias python="python3.12"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
