@@ -3,12 +3,11 @@
   "extensions.autoUpdate": false,
   "files.autoSave": "off",
   "breadcrumbs.enabled": false,
-  "breadcrumbs.icons": false,
   "breadcrumbs.filePath": "last",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.letterSpacing": 0.5,
   "terminal.integrated.shellIntegration.history": 0,
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontFamily": " NFM",
   "vim.cursorStylePerMode.insert": "line",
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -52,7 +51,8 @@
   "editor.formatOnPaste": true,
   "editor.accessibilitySupport": "off",
   "editor.formatOnSave": true,
-  "editor.fontFamily": "'FiraCode NF'",
+  "editor.fontFamily": "'Iosevka Term SS04 Extended'",
+  "editor.fontWeight": "bold",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.tabSize": 2,
@@ -67,7 +67,6 @@
   "editor.cursorSurroundingLines": 999,
   "workbench.editor.revealIfOpen": true,
   "workbench.editor.pinnedTabsOnSeparateRow": true,
-  "workbench.iconTheme": "vscode-icons",
   "workbench.editor.limit.value": 3,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
@@ -91,10 +90,60 @@
   "scm.diffDecorations": "none",
   "editor.matchBrackets": "near",
   // "editor.suggest.selectionMode": "never",
-  "workbench.colorTheme": "Material Theme Palenight",
+  "workbench.colorTheme": "One Dark Theme",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.activityBar.location": "hidden"
+  "tailwindCSS.colorDecorators": false,
+  "editor.inlineSuggest.enabled": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true,
+    "glsl": true
+  },
+  "editor.minimap.autohide": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.sectionHeaderFontSize": 4,
+  "css.lint.unknownAtRules": "ignore",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "One Dark italic",
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "One Dark italic reset",
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "breadcrumbs.icons": false,
+  "workbench.iconTheme": "vscode-icons"
 }
